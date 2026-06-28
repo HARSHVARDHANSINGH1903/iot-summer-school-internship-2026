@@ -1,0 +1,13 @@
+name: Count INO Files
+on: [push]
+
+jobs:
+  count-ino:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Count .ino files using Python
+        run: |
+          python3 -c "import glob; files = glob.glob('**/*.ino', recursive=True); print(f'Total .ino files: {len(files)}')"
