@@ -25,3 +25,31 @@ Once uploaded, the LED will begin to blink. Opening the Serial Monitor (set to 9
 * **LED not lighting up:** Check the polarity of the LED; it may be plugged in backward. Ensure the resistor is properly seated.
 * **Code fails to upload:** Verify that the correct board and COM port are selected in the Arduino IDE Tools menu. Ensure the USB cable supports data transfer, not just power.
 * **Blink speed does not change:** Ensure the middle pin of the potentiometer is firmly connected to A0, and the outer pins are receiving 5V and GND.
+
+
+
+
+Q9)
+git clone: Downloads a complete, independent copy of a remote repository from GitHub to your local computer.
+When to use: Only once, when you are first setting up a project on a new machine.
+git fetch: Downloads the latest updates and history from the remote repository but does not modify or merge them into your current working files.
+When to use: When you want to safely check what changes your teammates have made before deciding to integrate them.
+git pull: Downloads the latest updates from the remote repository and immediately merges them into your local files (fetch + merge).
+When to use: When you want to quickly update your local workspace to match the latest version on GitHub.
+
+
+Q10)
+What is it? A .gitignore file is a plain text file that tells Git exactly which files or folders it should ignore. This prevents temporary files, compiled binaries, or sensitive passwords from being accidentally uploaded to your public repository.
+The requested .gitignore content:
+
+# Compiled output files
+*.hex
+*.elf
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE config folders
+.vscode/
+build/
